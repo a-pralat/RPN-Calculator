@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <TextView
+        android:id="@+id/numberPrecision"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/numberPrecision"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/screenColor"
+        app:layout_constraintEnd_toStartOf="@+id/chooseNumberPrecision"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/screenColor"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/screenColor"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/normalButtonColor"
+        app:layout_constraintEnd_toStartOf="@+id/chooseScreenColor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberPrecision" />
+
+    <TextView
+        android:id="@+id/normalButtonColor"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/normalButtonColor"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/specialButtonColor"
+        app:layout_constraintEnd_toStartOf="@+id/chooseNormalButtonColor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screenColor" />
+
+    <TextView
+        android:id="@+id/specialButtonColor"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/specialButtonColor"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/save"
+        app:layout_constraintEnd_toStartOf="@+id/chooseSpecialButtonColor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normalButtonColor" />
+
+    <Spinner
+        android:id="@+id/chooseNumberPrecision"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:entries="@array/precision"
+        app:layout_constraintBottom_toTopOf="@+id/chooseScreenColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/numberPrecision"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/chooseScreenColor"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:entries="@array/color"
+        app:layout_constraintBottom_toTopOf="@+id/chooseNormalButtonColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/screenColor"
+        app:layout_constraintTop_toBottomOf="@+id/chooseNumberPrecision" />
+
+    <Spinner
+        android:id="@+id/chooseNormalButtonColor"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:entries="@array/color"
+        app:layout_constraintBottom_toTopOf="@+id/chooseSpecialButtonColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/normalButtonColor"
+        app:layout_constraintTop_toBottomOf="@+id/chooseScreenColor" />
+
+    <Spinner
+        android:id="@+id/chooseSpecialButtonColor"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:entries="@array/color"
+        app:layout_constraintBottom_toTopOf="@+id/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/specialButtonColor"
+        app:layout_constraintTop_toBottomOf="@+id/chooseNormalButtonColor" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/purple"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
